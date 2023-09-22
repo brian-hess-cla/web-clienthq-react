@@ -1,0 +1,63 @@
+﻿.clienthq-login {
+    text-align: center;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+
+    &__heading {
+        color: #fff;
+        font-family: 'MuseoSans-300';
+        font-size: 4em;
+        padding: .5em;
+    }
+
+    &__form {
+        &-btn {
+            background: #fff;
+            color: #2180bc;
+            margin-bottom: 0;
+
+            &:after {
+                color: #fff;
+            }
+
+            &:hover {
+                background: #2180bc;
+                color: #fff;
+
+                &:after {
+                    background: #fff;
+                    color: #2180bc;
+                }
+            }
+        }
+
+        & &-btn {
+            //increse specificity
+            width: inherit;
+        }
+    }
+
+    & ~ * > * {
+        //login sits in header, remove padding and height from content
+        padding: 0 !important;
+        min-height: 0 !important;
+    }
+
+    @include bp-max($bp-tablet) {
+        &__heading {
+            font-size: 2em;
+        }
+
+        &__form {
+            & &-btn {
+                //increse specificity
+                width: 80%;
+            }
+        }
+    }
+}

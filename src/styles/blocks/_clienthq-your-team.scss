@@ -1,0 +1,149 @@
+﻿.clienthq-your-team {
+    background-color: $colors__gray--f7;
+    /*min-height: 300px;*/ /*Remove*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5em;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+
+    &__heading {
+        @include fonts__sans-serif-bold;
+        color: $color-white;
+        background-color: $color-green-olive;
+        font-size: 18px;
+        padding: .5em 1em;
+        margin-bottom: 1em;
+        flex: 0 0 100%;
+        max-height: 2.5em;
+    }
+
+    &__lead {
+        flex-grow: 1;
+        font-size: 16px;
+    }
+
+    // &__lead, &__search {
+    //     padding: 0 1em;
+    // }
+
+    &__name {
+        @include fonts__sans-serif-bold;
+        color: $colors__blue;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    &__lead > a:hover {
+        text-decoration: none;
+    }
+
+    &__lead > *, &__links > * {
+        display: block;
+    }
+
+    &__links {
+        margin: 1em 0 1.5em;
+        padding-bottom: 1.5em;
+        border-bottom: 1px solid $color-grey-light-grey-hq;
+
+        & > a {
+            color: $color-grey-dark-grey;
+
+            &:hover {
+                @include fonts__sans-serif-bold;
+                color: $color-blue-blue;
+                text-decoration: none;
+            }
+
+            & > img {
+                margin-right: .5em;
+                margin-bottom: -.125em;
+            }
+        }
+
+        &-mail:before {
+            font-family: 'FontAwesome';
+            position: relative;
+            top: 2px;
+            text-align: center;
+            content: "\f0e0";
+            font-weight: 400 !important;
+            color: $color-grey-dark-grey;
+            padding-right: .5em;
+            font-size: 1.5em;
+        }
+
+        &-phone:before {
+            display: none;
+        }
+
+        &-profile:before {
+            display: none;
+        }
+
+
+        &-phone, &-profile {
+            @include fonts__sans-serif-medium;
+        }
+
+        &-mail:hover:before, &-phone:hover:before, &-profile:hover:before {
+            color: $color-blue-blue;
+        }
+    }
+
+    &__search-label {
+        margin-bottom: 1em;
+    }
+
+    & &__service-industry {
+        border-radius: unset;
+    }
+
+    &__icons {
+        margin-bottom: 5px;
+
+        &-mail, &-linkedin {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &-mail:before {
+            font-family: 'FontAwesome';
+            position: relative;
+            top: 2px;
+            text-align: center;
+            content: "\f0e0";
+            font-weight: 400 !important;
+            color: $color-grey-dark-grey;
+            padding-right: .5em;
+            font-size: 1.5em;
+        }
+
+        &-linkedin:before {
+            font-family: 'FontAwesome';
+            position: relative;
+            top: 2px;
+            text-align: center;
+            content: "\f08c";
+            font-weight: 400 !important;
+            color: $color-grey-dark-grey;
+            padding-right: .5em;
+            font-size: 1.5em;
+        }
+    }
+
+    &__image {
+        border-radius: 100%;
+        overflow: hidden;
+        max-width: 50px;
+    }
+
+    &__detail {
+        @include fonts__sans-serif-medium;
+    }
+}

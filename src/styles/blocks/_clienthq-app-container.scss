@@ -1,0 +1,57 @@
+.clienthq-apps {
+    color: #000;
+
+    &__heading {
+        color: #000;
+        border-bottom: 4px solid #2180bc;
+        padding-bottom: .5em;
+        margin-bottom: 0;
+        display: inline-block;
+    }
+
+    &__main {
+        display: flex;
+        flex-wrap: wrap;
+        // background-color: #FFF;
+        padding: 1em 0;
+        margin-top: -4px; /* pull under underline of title*/
+    }
+
+    &-container {
+        flex: 2;
+        margin: 2em 2em 0;
+        min-width: 260px;
+        max-width: 320px;
+
+        &__title {
+            width: 100%;
+            color: #404041;
+            border-bottom: 1px solid #404041;
+            margin-bottom: .75em;
+        }
+
+        &__list {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+    }
+
+    @include bp-max($bp-tablet) {
+        & {
+            justify-content: center;
+
+            &__heading {
+                padding: .25em;
+            }
+        }
+    }
+
+    @include bp-max($bp-mobile) {
+
+        &-container {
+            margin: .5em;
+        }
+    }
+}

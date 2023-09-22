@@ -1,0 +1,19 @@
+@import '_clienthq-app-container.scss';
+@import '_clienthq-app.scss';
+@import '_clienthq-call-to-action.scss';
+@import '_clienthq-header.scss';
+@import '_clienthq-login.scss';
+@import '_clienthq-logout.scss';
+@import '_clienthq-rail-promotion.scss';
+@import '_clienthq-resources.scss';
+@import '_clienthq-your-team.scss';
+@import '_clienthq-tabs.scss';
+@import '_clienthq-card.scss';
+@import '_client-hq-legacy.scss';
+@import '_clienthq-seamless-nav.scss';
+@import '_clienthq-footer.scss';
+@import '_clienthq-todos.scss';
+
+.clientHq {
+    background-color: $colors__gray--f7;
+}

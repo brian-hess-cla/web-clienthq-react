@@ -1,0 +1,33 @@
+@mixin target-devices-with-hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin target-devices-without-hover {
+  @media (hover: none) {
+    @content;
+  }
+}
+
+@mixin target-safari {
+  @media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+      @content;
+    }
+  }
+}
+
+@mixin target-placeholder () {
+  ::-webkit-input-placeholder,
+  :-moz-placeholder,
+  ::-moz-placeholder,
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin target-print () {
+  @media print {
+  }
+}

@@ -1,0 +1,9 @@
+[v-cloak] {
+    display: none;
+}
+
+button {
+    &:focus {
+        outline: thin dotted;
+    }
+}

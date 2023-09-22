@@ -1,0 +1,413 @@
+.global-footer {
+
+    p {
+        color: $color-white;
+    }
+
+    a {
+        color: $color-white;
+
+        &:hover {
+            color: $color-white;
+            text-decoration: underline;
+        }
+    }
+
+    &__subs {
+        width: 100%;
+        padding: 2em 0 2.5em;
+    }
+
+    &__nav {
+        width: 100%;
+        padding: 56px 0;
+
+        li {
+            font-size: 16px;
+            margin-bottom: 0.5em;
+        }
+    }
+
+    &-wrapper {
+        max-width: 70em;
+        margin: auto;
+    }
+
+    &__subs {
+        background: rgba(64,64,65,.1);
+
+
+        h2 {
+            text-align: center;
+            color: $color-blue-blue;
+            @include font-primary-medium;
+            font-size: 2em;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0 0 1.25em;
+            @include font-primary-light;
+        }
+
+        .footer-sub-container {
+            /*width: 100%;*/
+            display: flex;
+            margin-left: 20%;
+            flex-flow: row wrap;
+
+
+            .footer-input-container {
+                width: calc(100% - 300px);
+
+                input {
+                    width: 100%;
+                    /*display: block;*/
+                    height: 2.8125em;
+                    padding: 0 1em;
+                }
+            }
+
+            .footer-input-button-container {
+                width: 140px;
+                padding-left: 16px;
+
+                .footer-input-button {
+                    color: $color-white;
+                    text-align: center;
+                    height: 2.3125em;
+                    padding-right: 1em;
+                    padding-left: 1em;
+                    background-color: $color-dark-blue-footer;
+                    border-radius: 4px;
+                    font-size: 20px;
+                    width: 140px;
+                    line-height: 0;
+                    font-family: $font-family-primary-light;
+
+                    &:after {
+                        display: none !important;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        background-color: $color-blue-shakespear;
+                    }
+                }
+            }
+        }
+    }
+
+    &__nav {
+        background: #1B2435;
+        @include container;
+
+        &-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: calc((100%/12) * 10);
+            margin: auto;
+        }
+
+        .mobile-footer-logo {
+            position: absolute;
+            left: 10px;
+            top: 0;
+        }
+
+        &-col-title {
+            color: $color-white;
+            font-weight: 500;
+            margin: 0 0 0.5em;
+            margin-bottom: 10px;
+            margin-bottom: 0.875em;
+            font-family: $font-family-primary-medium;
+            font-size: 18px;
+        }
+
+        &-col {
+
+        }
+
+        .know-us, .get-started {
+            // @include span(3);
+            flex: 1 1 calc(((100%/10) * 2) - 30px);
+            margin-right: 30px;
+        }
+
+        .fineprint {
+            // @include span(6 last);
+            flex: 2 1 calc((100%/10) * 5);
+
+            p {
+                font-size: 14px;
+                margin-bottom: 0.875em;
+                font-family: $font-family-primary-light;
+            }
+
+            li {
+                font-size: 1.5em;
+            }
+
+            a {
+                // @include fonts__sans-serif-bold;
+                text-decoration: underline;
+            }
+
+            .global-footer__nav-col-title {
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+
+    .affiliation {
+        margin-top: 16px;
+        display: inline-block;
+    }
+
+    &__social {
+        background: $color-dark-blue-footer;
+        padding: 1.875em 0 2.188em;
+        // height: 104px;
+
+        .linkedin-footer:hover {
+            color: $color-linkedin;
+        }
+
+        .twitter-footer:hover {
+            color: $color-twitter;
+        }
+
+        .facebook-footer:hover {
+            color: $color-facebook;
+        }
+
+        .youtube-footer:hover {
+            color: $color-youtube;
+        }
+
+        .instangram-footer:hover {
+            color: $color-instagram;
+        }
+    }
+
+    &__social-wrapper {
+        display: table;
+        margin: 0 auto;
+
+        .small {
+            font-size: 1.1em;
+            padding-top: 0.70em;
+        }
+    }
+
+    &__social-list {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+    }
+
+    &__social-list-item {
+        font-size: 1.75em;
+        flex: 0 0 auto;
+        margin-left: 16px !important;
+        margin-bottom: 0!important;
+        line-height: 0;
+
+        &:first-child {
+            margin-left: 0!important;
+        }
+
+        a {
+            height: 56px;
+            width: 56px;
+            border-radius: 100%;
+            border: 1px solid $colors__white;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+            }
+        }
+    }
+
+    &__nexia-disclaimer p {
+        color: $color-white;
+        font-size: 12px;
+    }
+
+    &__disclaimer {
+        flex: 1 0 100%;
+        padding-top: 46px;
+        font-style: normal !important;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .subscribe-sub-title {
+        font-family: $font-family-primary-light;
+        font-size: 1.375em;
+        color: $color-very-dark-grey;
+        text-align: center;
+        padding-bottom: 2%;
+    }
+
+    .subscribe-title {
+        color: $color-dark-blue-footer;
+        font-size: 2.25em;
+        font-family: Georgia;
+        text-align: center;
+    }
+    // Responsive
+    @include media('<=tablet-portrait') {
+        &__subs {
+            h2 {
+                font-size: 1.75em;
+            }
+
+            h3 {
+                font-size: 1.125em;
+            }
+        }
+
+        &__nav {
+            padding: 32px 0;
+
+            &-wrapper {
+                max-width: none;
+            }
+
+            .mobile-footer-logo {
+                width: 3.125em;
+                height: 50px;
+            }
+
+            li > a {
+                font-size: 16px;
+            }
+        }
+
+        &__nav-col-title {
+            font-size: 18px;
+        }
+
+        &__nav-col-title {
+            letter-spacing: 0;
+        }
+
+        &__wrapper {
+            padding-left: 0;
+        }
+
+        &__nav {
+            box-shadow: none;
+
+
+            .mobile-footer-logo {
+                position: static;
+                height: 75px;
+                width: 75px;
+                margin: 0 auto 2em auto;
+                display: block;
+            }
+
+            .nexia-logo {
+                margin: 0 auto;
+                display: block;
+            }
+
+            .fineprint {
+                flex: 1 0 100%;
+            }
+
+        }
+
+        &__footer-social {
+            padding-top: 1em;
+
+            .small {
+                display: none;
+            }
+
+        }
+
+        &__subs {
+            h2 {
+                font-size: 1.75em;
+            }
+
+            h3 {
+                font-size: 1.125em;
+            }
+        }
+
+        &__social-list-item {
+            font-size: 1.5em;
+            margin-left: 12px;
+            a {
+                height: 45px;
+                width: 45px;
+            }
+        }
+
+        &__social {
+            padding: 20px 0 20px;
+        }
+
+        &__disclaimer {
+            padding-top: 32px;
+        }
+    }
+
+    // Mobile
+    // @include media('<=tablet-landscape') {
+    //     .know-us, .get-started {
+    //         // width: 50%;
+    //     }
+
+    //     .fineprint {
+    //         flex: 1 1 100%;
+    //     }
+    // }
+}
+
+@media print {
+    .global-footer {
+        border-top: 1px solid $color-black;
+
+        &__nav {
+
+            .fineprint {
+                font-size: 1em;
+                width: 100% !important;
+                float: none;
+                display: block;
+
+                h4 {
+                    display: none !important;
+                }
+
+                a:after {
+                    content: " (http://www.claconnect.com" attr(href) ") ";
+                    font-size: 0.8em;
+                    font-weight: normal;
+                }
+
+                a.affiliation:after {
+                    content: "http://www.nexia.com/" !important;
+                }
+            }
+        }
+    }
+}

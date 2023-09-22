@@ -1,0 +1,32 @@
+$spacing__gutter-width: 15px;
+
+@mixin spacing__component-top-padding {
+    padding-top: 40px;
+
+    @include media('>=tablet-landscape') {
+        padding-top: 48px;
+    }
+}
+
+@mixin spacing__component-bottom-padding {
+    padding-bottom: 40px;
+
+    @include media('>=tablet-landscape') {
+        padding-bottom: 48px;
+    }
+}
+
+@mixin spacing__component-y-margin {
+    --spacing__component-y-margin: 40px;
+
+    margin-top: var(--spacing__component-y-margin);
+    margin-bottom: var(--spacing__component-y-margin);
+
+    @include media('>=tablet-portrait') {
+        --spacing__component-y-margin: 56px;
+    }
+
+    @include media('>=tablet-portrait') {
+        --spacing__component-y-margin: 64px;
+    }
+}

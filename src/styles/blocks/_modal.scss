@@ -1,0 +1,127 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,.4);
+
+  > div {
+    height: 100%;
+    padding: 2em 1em;
+  }
+
+  &__content {
+    background-color: $colors__white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__container {
+    max-width: 1100px;
+    border-radius: 5px;
+    margin: auto;
+    padding: 1.5em 2.25em 1.5em 1.5em;
+  }
+
+  &__video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__close {
+    height: 30px;
+    width: 30px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 1.5em;
+    border: 2px solid $colors__white;
+    border-radius: 100%;
+    text-align: center;
+    
+    svg {
+      position: relative;
+      height: 50%;
+      width: 50%;
+      color: $colors__white;
+      top: 10%;
+    }
+  }
+}
+  
+.modal.is-open {
+    display: block;
+}
+
+.featured-media__play-button + [data-micromodal-trigger] {
+  cursor: pointer;
+}
+
+.clienthq-modal {
+  .modal__content {
+    padding: 1.5em;
+  }
+}
+
+
+@keyframes mmfadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+  from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+from { transform: translateY(15%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+display: none;
+}
+
+.micromodal-slide.is-open {
+display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+will-change: transform;
+}

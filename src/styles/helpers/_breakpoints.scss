@@ -1,0 +1,28 @@
+// Usage and documentation can be found at: https://eduardoboucas.github.io/include-media/
+@import "_include-media.scss";
+
+$breakpoints__phone-small: 375px;
+$breakpoints__phone: 450px;
+$breakpoints__tablet-portrait: 768px;
+$breakpoints__tablet-middle: 900px;
+$breakpoints__tablet-landscape: 1024px;
+$breakpoints__desktop: 1200px;
+$breakpoints__desktop-large: 1440px;
+$breakpoints__desktop-xlarge: 1920px;
+
+$breakpoints: (
+    // Standard
+    'phone-small': $breakpoints__phone-small,
+    'phone': $breakpoints__phone,
+    'tablet-portrait': $breakpoints__tablet-portrait,
+    'tablet-middle': $breakpoints__tablet-middle,
+    'tablet-landscape': $breakpoints__tablet-landscape,
+    'desktop': $breakpoints__desktop,
+    'desktop-large': $breakpoints__desktop-large,
+    'desktop-xlarge': $breakpoints__desktop-xlarge,
+
+    // Component Specific
+    'call-to-action__desktop': $breakpoints__phone,
+    'global-header__desktop': 900px
+);
+

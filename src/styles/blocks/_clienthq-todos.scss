@@ -1,0 +1,274 @@
+.clienthq-todos {
+
+    &__home {
+        background: #FFFFFF;
+        border: 1px solid #DDDDDD;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 40px 20px;
+        margin: 25px;
+    }
+
+    &__noTodos {
+        text-align: center;
+        font-family: museo-sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    &__applicationDrawer {
+        padding-bottom: 10px;
+    }
+
+    &__applicationDrawerHeader {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+
+
+        & .expandBtn {
+            width: 19px;
+            height: 19px;
+            background-color: #f7f7f7;
+            border-radius: 50%;
+            cursor: pointer;
+            padding-bottom: 7px;
+            padding-left: 2px;
+            display: flex;
+        }
+
+        & a[aria-expanded=false] .expandBtn {
+            background-image: url("../../images/plus.svg");
+        }
+
+        & a[aria-expanded=true] .expandBtn {
+            background-image: url("../../images/dash.svg");
+        }
+    }
+
+    &__drawerTitle {
+        display: flex;
+        font-size: 20px;
+        margin: 0 0 0 10px;
+        color: #2e334e;
+        flex-grow: 1;
+        align-items: center;
+    }
+
+    &__drawerTitleText {
+        margin-left: 5px;
+        text-align: left;
+        font-family: museo-sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 19px;
+        /* text-transform: uppercase; */
+        color: #2e334e;
+    }
+
+    &__drawerTitleCount {
+        height: 24px;
+        width: 24px;
+        font-family: museo-sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        color: #2E334E;
+        background-color: #e2e4ee;
+        border-radius: 50%;
+        display: inline-block;
+        padding-left: 8px;
+        margin-left: 10px;
+    }
+
+    &__drawerContent {
+        padding: 0px 22px 0px 22px;
+    }
+
+    &__drawerConnectorLine {
+        content: "";
+        position: absolute;
+        height: auto;
+        width: 1px;
+        background-color: rgb(198, 198, 198);
+        left: 34.5px;
+        top: 75px;
+        bottom: 55px;
+        z-index: 1;
+    }
+
+    &__projectDrawerContainer {
+        display: flex;
+        flex-direction: row;
+        margin-top: 24px;
+        margin-bottom: 25px;
+        /* align-items: center; */
+
+        & .expandBtn {
+            width: 19px;
+            height: 19px;
+            background-color: #f7f7f7;
+            border-radius: 50%;
+            margin-top: 38px;
+            margin-right: 15px;
+            cursor: pointer;
+            padding-bottom: 7px;
+            padding-left: 2px;
+            display: flex;
+        }
+
+        & a[aria-expanded=false] .expandBtn {
+            background-image: url("../../images/plus.svg");
+        }
+
+        & a[aria-expanded=true] .expandBtn {
+            background-image: url("../../images/dash.svg");
+        }
+
+        & a:focus {
+            color: none;
+            outline: none;
+        }
+
+        & a:hover {
+            color: none;
+            outline: none;
+        }
+    }
+
+    &__projectDrawer {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(250, 250, 250, 0.47);
+        width: 100%;
+        border: 1px solid rgba(151, 151, 151, 0.25);
+        border-radius: 4px;
+        padding: 25px 0 25px 0;
+    }
+
+    &__projectDrawerHeader {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    &__projectDrawerTitle {
+        display: flex;
+        font-size: 20px;
+        color: #2E334E;
+        align-items: center;
+        width: 100%;
+        padding-left: 25px;
+    }
+
+    &__projectDrawerDetails {
+        display: flex;
+        width: 100%;
+        padding-left: 27px;
+    }
+
+    &__projectDrawerTitleText {
+        font-family: museo-sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #2E334E;
+        text-align: left;
+    }
+
+    &__projectDrawerTitleCount {
+        height: 24px;
+        width: 24px;
+        font-family: museo-sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        color: #2E334E;
+        background-color: #e2e4ee;
+        border-radius: 50%;
+        display: inline-block;
+        padding-left: 8px;
+        margin-left: 10px;
+    }
+
+    &__projectDrawerContent {
+        /* padding: 22px 0px 0px 0px; */
+    }
+
+    &__projectDrawerDetails {
+        font-family: museo-sans;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        color: #979797;
+        padding-top: 9px;
+
+
+        & .clientIdContainer {
+            margin-right: 11.4px;
+        }
+
+        & .label {
+            font-weight: 600;
+            padding-right: 4px;
+        }
+    }
+
+    &__todoList {
+        display: flex;
+    }
+
+    &__todoListRow {
+        padding-top: 22px;
+        padding-left: 38px;
+        padding-bottom: 23px;
+    }
+
+    &__itemNameText {
+
+        & a {
+            color: #34a0a2;
+            text-decoration-line: underline;
+            color: #2D3C59;
+            /* no underline */
+        }
+    }
+
+
+    &__todoListCell {
+        padding: 0px;
+        font-family: museo-sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        color: #4B4B4B;
+    }
+
+    &__todoListHeaders {
+        background: #F7F7F7;
+        border: 1px solid rgba(151, 151, 151, 0.25);
+        padding: 16px 0px 16px 38px;
+    }
+
+    &__todoListHeader {
+        color: #2E334E;
+        font-family: museo-sans;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    &__toDoDivider {
+        margin: 0 10px 0 10px;
+    }
+}

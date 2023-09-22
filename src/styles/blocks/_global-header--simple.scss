@@ -1,0 +1,48 @@
+.global-header--simple {
+  z-index: 6;
+
+  .width-container {
+      height: 113px;
+
+      .global-header__logo-buttons {
+          padding-left: 50px;
+      }
+
+      .header-section1__subtitle4 {
+        font-size: 20px;
+        text-align: right;
+        margin: 0;
+      }
+  }
+}
+
+@include media('<tablet-middle') {
+  .global-header--simple {
+    .width-container {
+      height: 76px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px 0 20px;
+      gap: 10px;
+
+      .global-header__logo-buttons {
+        padding: 0;
+
+        .global-header__logo {
+          width: 55px;
+        }
+      }
+    }
+  }
+}
+
+@include media('<tablet-portrait') {
+  .global-header--simple {
+    .width-container {
+      .header-section1__subtitle4 {
+        font-size: 14px;
+      }
+    }
+  }
+}

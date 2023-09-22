@@ -1,0 +1,46 @@
+.width-container {
+    --width-container-padding: 45px;
+    max-width: var(--max-width__width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $spacing__gutter-width;
+    padding-right: $spacing__gutter-width;
+
+    &--full {
+        --max-width__width: 1190px;
+    }
+
+    &--medium {
+        --max-width__width: 1000px;
+    }
+
+    &--narrow-small {
+        --max-width__width: 700px;
+    }
+
+    &--narrow {
+        --max-width__width: 800px;
+    }
+
+    &--narrow-large {
+        --max-width__width: 860px;
+    }
+
+    &--vertical-padded {
+        padding-top: var(--width-container-padding);
+        padding-bottom: var(--width-container-padding);
+    }
+
+    &--vertical-padded-margin {
+        margin-top: var(--width-container-padding);
+        margin-bottom: var(--width-container-padding);
+    }
+    @include media('>=tablet-portrait') {
+        --width-container-padding: 64px;
+    }
+    // target legacy pages to not have extra padding
+    .content-well &.hubspot-form {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

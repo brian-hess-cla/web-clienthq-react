@@ -1,0 +1,146 @@
+$colors__white: #FFFFFF;
+$colors__black: #000000;
+
+$colors__blue: #2D3C59;
+$colors__blue--dark: #343844;
+$colors__blue--dark-alt: #1F2A3E;
+$colors__blue--darkest: #1B2435;
+$colors__blue-alt: #2E334E;
+$colors__blue--light: #f0f8ff;
+$colors__teal--dark: #64A8A9;
+$colors__teal: #7DD2D3;
+$colors__teal--light: #D8F2F2;
+$colors__teal--lightest: #F2FBFB;
+$colors__teal--lightest-alt: #E5F6F6;
+$colors__gray--33: #333333;
+$colors__gray--25: #25282A;
+$colors__gray--84: #848484;
+$colors__gray--71: #717171;
+$colors__gray--ac: #ACACA7;
+$colors__gray--c5: #C5C5C1;
+$colors__gray--d8: #D8D8D8;
+$colors__gray--de: #DEDEDC;
+$colors__gray--ee: #EEEEED;
+$colors__gray--f7: #F7F7F6;
+$colors__red: #F0583B;
+$colors__orange: #FBC55A;
+$colors__orange--light: #FCD68C;
+$colors__orange--saffron: #FBC55A;
+$colors__green: #DCE464;
+$colors__green--light: #EEF2B2;
+$colors__green--dark: #c0ca3d;
+$colors__green--alt: #EAEFA2;
+
+// AA Accessibility Text Mappings
+$colors__gray-on-white: $colors__gray--25;
+
+/*BLUES*/
+$color-blue-shakespear: #2180BC; /*SAME AS BLUE-BLUE GO BACK AND SIMPLIFY*/ /*USE THIS*/
+$color-blue-blue: #2180BC; /*SAME AS BLUE-BLUE GO BACK AND SIMPLIFY*/
+$color-blue-cerulean: #2180BC; /*SAME AS BLUE-BLUE GO BACK AND SIMPLIFY*/
+$color-blue-prusian-blue: #002466;
+$color-blue-denim: #18468a;
+$color-blue-air-force-blue: #89BDDB;
+$color-blue-segul: #89bcda;
+$color-blue-picton: #57A0CC;
+$color-blue-pale: #DDECF5;
+$color-blue-clienthq-nav-hover: #125fa5;
+$color-dark-blue-footer: #2D3C59;
+$color-blue-riptide: #7dd2d3;
+$color-teal-riptide: #5CB8B2;
+$color-blue-darkest: #343844;
+
+/*BROWNS*/
+$color-brown-cocao-brown: #404041; /*SAME AS BLUE-BLUE GO BACK AND SIMPLIFY*/
+$color-brown-spice: #404041; /*SAME AS BROWN-COCAO-BROWN GO BACK AND SIMPLIFY*/
+$color-brown-brown-bramble: #403215;
+$color-brown-maroon: #660003; /*RETIRE THIS COLOR*/
+$color-brown-russet: #C8712D;
+$color-brown-woodburn: #404041; /*SAME AS COLOR-BROWN-SPICE GO BACK AND SIMPLIFY*/
+$color-brown-sand-dune: #8a7261;
+$color-brown-zorba: #A0978D;
+$color-brown-tide: #c3b9b3;
+$color-brown-au-chico: #9d5b5c;
+
+/*GREENS*/
+$color-green-olive: #819F3D;
+$color-green-gimblet: #BAAD62;
+$color-green-wild-willow: #c8bf66;
+$color-green-pixie-green: #C8D4AA;
+$color-green-olivine: #A7BB76;
+$color-green-rainforest: #637D2D;
+$color-green-verdun-green: #354B10;
+$color-green-celedon: #E2E868;
+
+
+/*GREYS*/
+$color-grey-very-light-grey: #DAD8D7;
+$color-gray-light-grey: #DAD8D7; /*SAME AS GREY-VERY-LIGHT-GREY GO BACK AND SIMPLIFY*/
+$color-gray-gallery-grey: #DAD8D7; /*SAME AS GREY-VERY-LIGHT-GREY* GO BACK AND SIMPLIFY*/
+$color-whitesand-grey: #DAD8D7; /*SAME AS GREY-VERY-LIGHT-GREY GO BACK AND SIMPLIFY*/
+$color-white-gainsboro: #DAD8D7; /*SAME AS GREY-VERY-LIGHT-GREY GO BACK AND SIMPLIFY*/
+$color-gray-white: #f0efef;
+$color-nobel-grey: #7A7677;
+$color-main-nav-hover: #7c7778;
+$color-gray-header-section: #EEECEB;
+$color-grey-dark-grey: #404041;
+$color-grey-light-grey-hq: #D8D8D8;
+$color-grey-border: #C5C5C5;
+$color-grey-dark-dark-grey: #707071;
+$color-grey-border-hq: #B3B3B3;
+$color-very-dark-grey: #333333;
+$color-light-grey: #EEEEED;
+$color-lighter-grey: #F7F7F6;
+$color-grey-25: #25282A;
+
+
+/*ORANGES*/
+$color-orange-rich-gold: #C8712D;
+$color-orange-santa-fe: #d38c55;
+$color-burlywood-brown: #E1B28C;
+$color-orange-tenne: #BC5200;
+$color-red-sangria: #993300;
+$color-whiskey-sour-orange: #D28C54;
+$color-christine-orange: #BB5427;
+$color-burnt-umber-brown: #983620;
+$color-orange-light: #FCD68C;
+$color-orange-saffron: #FBC55A;
+$colors-orange-dark: #f7981f;
+
+/*PURPLES*/
+$color-violet-jagger: #59365C;
+$color-violet-honey-flower: #574466;
+$color-violet-strikemaster: #806682;
+$color-violet-lilac-bush: #A47CC4;
+$color-violet-chatelle: #AA99AB;
+$color-violet-blackcurrant: #3B1E3E;
+$color-violet-indigo: #210023;
+
+/*YELLOWS*/
+$color-yellow-sundance: #c9bb55;
+$color-yellow-lemon-ginger: #978b2c;
+$color-yellow-dutch-white: #f1e3c5;
+$color-yellow-akaroa: #bbb099;
+$color-yellow-apricot-white: #f9f4e8;
+$color-yellow-blanched-almond: #FFEFCC;
+$color-yellow-salomie: #FFDC83;
+$color-yellow-sunglow: #FFc81e;
+$color-yellow-sunflower: #DDAD18;
+$color-yellow-lucky: #B08E1F;
+$color-yellow-chardonnay: #FFC57C;
+
+/*WHITE*/
+$color-white: #FFF;
+
+/*BLACK*/
+$color-black: #000;
+
+/*REDS*/
+$color-red-fire-engine-red: #CA161C;
+
+/*SOCIAL*/
+$color-linkedin: #0077B5;
+$color-twitter: #0084b4;
+$color-facebook: #3B5998;
+$color-youtube: #cc181e;
+$color-instagram: #DD2A7B;

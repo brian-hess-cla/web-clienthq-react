@@ -1,0 +1,457 @@
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    @include font-primary-serif;
+    color: $color-dark-blue-footer;
+    margin-bottom: 0;
+    line-height: 1.20;
+    font-size: 2em;
+    
+    @include media('>=tablet-portrait') {
+        font-size: 2.5em;
+    }
+}
+
+h2 {
+    // @include font-primary-light;
+    // @include font-primary-serif;
+    @include fonts__sans-serif-medium;
+    // color: $color-orange-rich-gold;
+    color: $color-dark-blue-footer;
+    // font-size: 1.65em;
+    margin-bottom: 24px;
+    line-height: 1.25;
+    font-size: 24px;
+}
+
+h2.intro {
+    @include font-primary-medium;
+    color: $color-brown-spice;
+    font-size: 1.250em;
+    font-weight: normal;
+    line-height: 1.35;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 1.250em;
+    letter-spacing: 0px;
+}
+
+h3 {
+    @include font-primary-light;
+    color: $color-brown-cocao-brown;
+    /*font-size: 1.750em;*/
+    font-size: 1.4em;
+    margin-bottom: .25em;
+    line-height: 1.25;
+}
+
+h4 {
+    @include font-primary-light;
+    color: $color-brown-cocao-brown;
+    font-size: 1.275em;
+    margin-bottom: .1em;
+    line-height: 1.25;
+}
+
+h5 {
+    @include font-primary-light;
+    color: $color-brown-cocao-brown;
+    font-size: 1.125em;
+    margin-bottom: 0;
+    line-height: 1.25;
+}
+
+h6 {
+    @include font-primary-light;
+    color: $color-brown-cocao-brown;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.25;
+}
+
+// Legacy Styles
+.content-well,
+.careers-intro {
+    h2 {
+        @include font-primary-serif;
+        // color: $color-orange-rich-gold;
+        color: $color-dark-blue-footer;
+        // font-size: 1.65em;
+        font-size: 2.37em;
+        margin-bottom: .25em;
+        line-height: 1.25;
+    }
+
+    .button {
+        margin-bottom: 1.25em;
+    }   
+}
+
+h2 a, h3 a, h4 a, h5 a {
+    // color: $color-blue-shakespear;
+    color: $color-dark-blue-footer;
+}
+
+h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
+    text-decoration: underline;
+}
+
+b, strong {
+    @include font-primary
+}
+
+p {
+    color: $color-brown-spice;
+    font-size: 1.20em;
+    font-weight: normal;
+    line-height: 1.35;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 1.250em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+p:empty {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    line-height: 0px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+a {
+    // color: $color-blue-shakespear;
+    color: $color-dark-blue-footer;
+    /*font-weight: 650;*/
+    text-decoration: none;
+    line-height: inherit;
+    transition: color $transition-timing-primary, background-color $transition-timing-primary;
+    word-wrap: break-word;
+
+    &:hover {
+        color: $color-blue-prusian-blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &:focus {
+        // outline: none;
+    }
+
+    &:visited {
+        text-decoration: none;
+    }
+
+    &.no-link {
+        cursor: default;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+ul {
+    font-size: 19px;
+    color: $color-brown-spice;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.250em;
+    list-style-type: disc;
+
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        line-height: 1.25;
+        margin-bottom: .25em;
+    }
+
+    ul {
+        // list-style-type: disc;
+        list-style-type: none;
+        /*margin-left: 11px;*/
+        margin-bottom: 0px;
+        font-size: inherit;
+        display: table;
+
+        li {
+            // list-style: circle;
+            list-style: none;
+            // display: table-row;
+
+            // &:before {
+            //     content: "– ";
+            //     margin-left: -11px;
+            //     display: table-cell;
+            //     text-align: right;
+            //     padding-right: .3em;
+            //     /*padding-left:11px;*/
+            // }
+        }
+    }
+
+    // legacy styles for checkmark list
+    &.check {
+        list-style-type: none;
+        li {
+            list-style-type: none!important;
+            padding-left: 1em;
+            position: relative;
+            &::before {
+                content: '\2713';
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
+ol {
+    list-style-type: decimal;
+    font-size: 19px;
+    color: $color-brown-spice;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.25em;
+
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        margin-left: 1em;
+        line-height: 1.25;
+        margin-bottom: .25em;
+    }
+
+    ol {
+        margin-bottom: 0px;
+    }
+}
+
+ul p, ol p {
+    margin-top: 1.25em;
+    font-size: 19px;
+}
+
+/* This tightens the space between paragraphs, headlines and lists*/
+
+h1 + ul, h1 + ol {
+    margin-top: -.25em;
+}
+
+h2.intro + ul, h2.intro + ol {
+    margin-top: -.25em;
+}
+
+h2 + ul, h3 + ul, h4 + ul, h5 + ul,
+h2 + ol, h3 + ol, h4 + ol, h5 + ol {
+    margin-top: 0em;
+}
+
+p + ul, p + ol {
+    margin-top: -.75em;
+}
+
+p:empty + ul, p:empty + ol {
+    margin-top: 0em;
+}
+
+hr {
+    border: solid $color-gray-light-grey;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 1.25em 0 1.1875em;
+    height: 0;
+}
+
+// hr.blue {
+//     border: solid $color-blue-prusian-blue;
+//     border-width: 1px 0 0;
+//     clear: both;
+//     margin: 1.25em 0 1.1875em;
+//     height: 0;
+// }
+
+// hr.orange {
+//     border: solid $color-orange-rich-gold;
+//     border-width: 1px 0 0;
+//     clear: both;
+//     margin: 1.25em 0 1.1875em;
+//     height: 0;
+// }
+
+/*TEXT SHADOWS - MOSTLY USED ON ADS*/
+.text-shadow {
+    text-shadow: 2px 2px 5px #1c1c1c;
+}
+
+/*COLORS*/
+// .color-blue-shakespear {
+//     color: $color-blue-shakespear !important;
+// }
+
+// .color-blue-prusian-blue {
+//     color: $color-blue-prusian-blue !important;
+// }
+
+// .color-blue-denim {
+//     color: $color-blue-denim !important;
+// }
+
+// .color-blue-blue {
+//     color: $color-blue-blue !important;
+// }
+
+// .color-blue-cerulean {
+//     color: $color-blue-cerulean;
+// }
+
+// .color-black {
+//     color: $color-black !important;
+// }
+
+// .color-brown-cocao-brown {
+//     color: $color-brown-cocao-brown !important;
+// }
+
+// .color-brown-spice {
+//     color: $color-brown-spice !important;
+// }
+
+// .color-brown-brown-bramble {
+//     color: $color-brown-brown-bramble !important;
+// }
+
+// .color-brown-maroon {
+//     color: #660003 !important;
+// }
+// /*CHANGE THIS LATER*/
+// .color-brown-russet {
+//     color: $color-brown-russet !important;
+// }
+
+// .color-brown-woodburn {
+//     color: $color-brown-woodburn !important;
+// }
+
+// .color-brown-sand-dune {
+//     color: $color-brown-sand-dune !important;
+// }
+
+// .color-brown-zorba {
+//     color: $color-brown-zorba !important;
+// }
+
+// .color-brown-tide {
+//     color: $color-brown-tide !important;
+// }
+
+// .color-green-olive {
+//     color: $color-green-olive !important;
+// }
+
+// .color-green-gimblet {
+//     color: $color-green-gimblet !important;
+// }
+
+// .color-green-wild-willow {
+//     color: $color-green-wild-willow !important;
+// }
+
+// .color-grey-very-light-grey {
+//     color: $color-grey-very-light-grey !important;
+// }
+
+// .color-gray-light-grey {
+//     color: $color-gray-light-grey !important;
+// }
+
+// .color-gray-gallery-grey {
+//     color: $color-gray-gallery-grey !important;
+// }
+
+// .color-gray-white {
+//     color: $color-gray-white !important;
+// }
+
+// .color-nobel-grey {
+//     color: $color-nobel-grey !important;
+// }
+
+// .color-whitesand-grey {
+//     color: $color-whitesand-grey !important;
+// }
+
+// .color-orange-rich-gold {
+//     color: $color-orange-rich-gold !important;
+// }
+
+// .color-orange-santa-fe {
+//     color: $color-orange-santa-fe !important;
+// }
+
+// .color-violet-jagger {
+//     color: $color-violet-jagger !important;
+// }
+
+// .color-violet-honey-flower {
+//     color: $color-violet-honey-flower !important;
+// }
+
+// .color-violet-strikemaster {
+//     color: $color-violet-strikemaster !important;
+// }
+
+// .color-yellow-sundance {
+//     color: $color-yellow-sundance !important;
+// }
+
+// .color-yellow-lemon-ginger {
+//     color: $color-yellow-lemon-ginger !important;
+// }
+
+// .color-yellow-apache {
+//     color: #D3A367 !important;
+// }
+// /*CHANGE THIS LATER*/
+// .color-yellow-dutch-white {
+//     color: $color-yellow-dutch-white !important;
+// }
+
+// .color-yellow-akaroa {
+//     color: $color-yellow-akaroa !important;
+// }
+
+// .color-yellow-apricot-white {
+//     color: $color-yellow-apricot-white !important;
+// }
+
+// .color-white {
+//     color: $color-white !important;
+// }
+
+// .color-white-gainsboro {
+//     color: $color-white-gainsboro !important;
+// }
+
+// .color-red-fire-engine-red {
+//     color: $color-red-fire-engine-red !important;
+// }
+
+@mixin fonts__eyebrow () { 
+    font-family: $fonts__sans-serif, 'arial', sans-serif;
+    font-style: normal;
+    font-weight: $fonts__font-weight--light;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

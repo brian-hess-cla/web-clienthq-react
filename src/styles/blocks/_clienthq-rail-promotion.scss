@@ -1,0 +1,38 @@
+﻿.clienthq-rail-promotion {
+    min-height: 400px;
+    text-align: center;
+    margin-top: 2em;
+
+    &__top {
+        background-color: $color-blue-prusian-blue;
+        padding: 2em;
+
+        &-heading {
+            color: $color-white;
+            font-size: 2em;
+            font-weight: normal;
+        }
+
+        &-desc {
+            color: $color-white;
+        }
+    }
+
+    &__bottom {
+        background-color: $color-blue-blue;
+        padding: 1.5em;
+
+        &-time {
+            color: $color-white;
+        }
+
+        > a {
+            margin-top: 1em;
+            padding: 0 4em 0 .25em;
+        }
+    }
+
+    @include bp-max($bp-desktop) {
+        min-height: 250px;
+    }
+}

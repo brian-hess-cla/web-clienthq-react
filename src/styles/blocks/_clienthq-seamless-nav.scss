@@ -1,0 +1,175 @@
+.clienthq-seamless-nav {
+    padding: 10px 22px 10px 22px;
+    background-color: #2e334e;
+
+    &__nav-list {
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        padding: 10px 20px 20px;
+        border: 1px solid #b3b3b3;
+        border-top: 0 solid #b3b3b3;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+        top: 40px;
+        border-radius: 6px;
+
+        & a {
+            text-decoration: none;
+            color: $colors__blue;
+        }
+
+        & a:hover {
+            text-decoration: underline;
+            color: $colors__blue;
+        }
+
+        & ul {
+            list-style: none;
+            padding-left: 0px;
+            padding-top: 10px;
+            margin-bottom: 0px;
+
+            & a:hover {
+                text-decoration: underline;
+                color: $colors__blue;
+            }
+        }
+    }
+
+    &__nav-logo {
+        padding-top: 18px;
+    }
+
+    &__nav-back:before {
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        content: "\F104";
+        font-family: FontAwesome;
+        color: #fff;
+        text-align: center;
+        height: 24px;
+        width: 24px;
+        padding-right: 10px;
+    }
+
+    &__nav-back:hover::before {
+        text-decoration: none;
+    }
+
+    &__nav-dropdown:after {
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        content: "\F107";
+        font-family: FontAwesome;
+        color: #fff;
+        text-align: center;
+        height: 24px;
+        width: 24px;
+        padding-left: 10px;
+    }
+
+    &__nav-container {
+        display: flex;
+        flex-grow: 0;
+        font-family: MuseoSans;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #fff;
+        padding: 0px 40px 0px 0px;
+        alight-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        a:hover {
+            color: #fff;
+        }
+    }
+
+    &__nav-content {
+        margin: 0 auto;
+        max-width: 1100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: none;
+        width: 100%;
+        justify-content: left;
+    }
+
+    &__nav-container.active:before {
+        background-image: url("/-/media/clienthq/icons/temp.ashx");
+        height: 25px;
+        width: 25px;
+        content: "";
+    }
+
+    &__nav-container.active a {
+        margin: auto;
+    }
+
+    &__width-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav-link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &__profileicon-container {
+        border-radius: 100%;
+        overflow: hidden;
+        height: 40px;
+        width: 40px;
+        background-color: $colors__gray--84;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__profileicon {
+        padding: 0 .5em;
+    }
+
+    &__arrow {
+        font-style: normal;
+        margin-left: .5em;
+
+        &::after {
+            font-family: 'FontAwesome';
+            font-size: 1em;
+            content: '\f107';
+        }
+        // border: solid $color-white;
+        // border-width: 0 2px 2px 0;
+        // box-sizing: border-box;
+        // height: 1em;
+        // width: 1em;
+        // display: inline-block;
+        // margin-left: 10px;
+        // margin-bottom: 2px;
+        // transform: rotate(45deg);
+        // -webkit-transform: rotate(45deg);
+    }
+
+    &__nav-bg {
+        height: 100px;
+        margin: 1px 0 28.5px;
+        background-color: #fff;
+    }
+}

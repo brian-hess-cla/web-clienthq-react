@@ -1,0 +1,213 @@
+.clienthq-apps-app {
+    box-sizing: border-box;
+    height: 90px;
+    width: 148px;
+    background-color: $color-white;
+    list-style: none;
+    perspective: 1000px;
+    color: $colors__blue--dark;
+
+    @media (hover: hover) {
+        @media (pointer: fine){ 
+            &:hover &__link  {
+                // transform: rotateY(180deg);
+                transform: scale(1.1);
+            }
+
+            &:hover &__link::after {
+                height: 6px;
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        display: block;
+        // border: 1px solid $color-grey-border;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+        overflow: hidden;
+        padding-bottom: 6px;
+
+        &[href="#"] {
+            pointer-events: none;
+        }
+
+
+        & * {
+            color: $colors__blue--dark;
+        }
+
+        & p {
+            margin-top: .25em;
+            font-size: .75em;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left:0;
+            background-color: $colors__teal;
+            height: 0px;
+            width: 100%;
+            transition: .3s ease height;
+        }
+    }
+
+    &__image-only {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    &__img-top, &__img-left {
+        height: 40%;
+        margin-top: .5em;
+    }
+
+    &__img-left {
+        margin-top: 0;
+    }
+    /*check if there are color vars for some if not all of these colors*/
+    &--black {
+        background-color: $color-grey-dark-grey;
+    }
+
+    &--blue {
+        background-color: $color-blue-blue;
+    }
+
+    &--dark-grey {
+        background-color: $color-grey-dark-dark-grey;
+    }
+
+    &--light-grey {
+        background-color: $color-grey-border;
+
+        & * {
+            color: $color-black;
+        }
+    }
+
+    &--green {
+        background-color: $color-green-olive;
+    }
+
+    &--orange {
+        background-color: $color-orange-rich-gold;
+    }
+
+    &--purple {
+        background-color: $color-violet-jagger;
+    }
+
+    &--white {
+        background-color: $color-white;
+
+        & * {
+            color: $color-black;
+        }
+    }
+
+    &__front, &__back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+    }
+
+    &__front {
+        transform: rotateX(0deg); /*Firefox fix*/
+        &--left {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            & > img {
+                flex: 1;
+                object-fit: contain;
+                margin-left: .5em;
+            }
+
+            & > p {
+                flex: 2;
+                text-align: left;
+                padding-left: .5em;
+                margin: 0 auto;
+            }
+        }
+    }
+    /*All backs are flex, also front is for text only*/
+    &__back, &--text-only > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > p {
+            margin: 0 auto;
+        }
+    }
+
+    &__back {
+        transform: rotateY(180deg);
+        background-color: #414142;
+        padding: 0 .75em;
+
+
+        p {
+            color: $color-white;
+            line-height: 14px;
+            font-size: 12px;
+            font-family: MuseoSans-300;
+        }
+    }
+
+    &-modal {
+
+        &-close__x {
+            font-size: 1.25em;
+            color: #7a7677;
+            position: absolute;
+            right: 10px;
+            text-align: center;
+            top: 10px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        &__active {
+            pointer-events: all !important;
+
+            & .button {
+                padding-right: 20px;
+                margin-right: 2em;
+                min-width: 120px;
+                text-align: center;
+
+                &:after {
+                    content: '';
+                }
+            }
+
+            @include bp-max($bp-tablet) {
+                & h2 {
+                    font-size: 1em;
+                }
+
+                & p {
+                    font-size: .5em;
+                    margin-top: .25em;
+                }
+            }
+        }
+    }
+}

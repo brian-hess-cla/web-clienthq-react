@@ -1,0 +1,34 @@
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin transition($property: all, $timing: $transition-timing) {
+    transition: $property #{$timing+ms} $transition-ease 0s;
+}
+
+//Breakpoints
+@mixin bp-max($custom-px) {
+    @media screen and (max-width: px-to-em($custom-px, $base-font-size)) {
+        @content;
+    }
+}
+
+@mixin bp-min($custom-px) {
+    @media screen and (min-width: px-to-em($custom-px, $base-font-size)) {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+
+    @each $placeholder in $placeholders {
+        &:#{$placeholder}-placeholder {
+            @content;
+        }
+    }
+}

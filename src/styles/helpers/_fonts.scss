@@ -1,0 +1,228 @@
+//------------------------------------------
+//        Variables
+//------------------------------------------
+$fonts__file-path-fonts: '../../fonts';
+
+$fonts__base-size: 16px;
+
+$fonts__sans-serif: 'MuseoSans';
+$fonts__serif-regular: 'Georgia';
+
+$fonts__font-weight--light: 300;
+$fonts__font-weight--regular: 400;
+$fonts__font-weight--medium: 500;
+$fonts__font-weight--bold: 700;
+$fonts__font-weight--black: 900;
+
+$font-family-foundation-icons: 'Foundation Icons';
+$font-family-franklin-gothic: 'Franklin Gothic';
+$font-family-jenna-sue: 'Jenna Sue', Arial;
+$font-name-jenna-sue: 'Jenna Sue';
+$font-family-league-gothic: 'League Gothic';
+$font-family-fontawesome: 'FontAwesome';
+$font-family-ionicons: 'Ionicons';
+$font-family-stateface-regular: 'statefaceregular';
+$font-family-primary-light: 'MuseoSans-300';
+$font-family-primary: 'MuseoSans-500';
+$font-family-primary-medium: 'MuseoSans-700';
+$font-family-primary-bold: 'MuseoSans-900';
+$font-family-serif: 'Georgia';
+
+//------------------------------------------
+//        Functions
+//------------------------------------------
+
+@function em($px, $base: $fonts__base-size) {
+    @return ($px / $base) * 1em;
+}
+
+@function rem($px, $base: $fonts__base-size) {
+    @return ($px / $base) * 1rem;
+}
+
+//------------------------------------------
+//              Mixins
+//------------------------------------------
+
+@mixin font-face-weight($font-family, $file-path, $font-style, $font-weight) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$fonts__file-path-fonts}/#{$file-path}.eot');
+        src: url('#{$fonts__file-path-fonts}/#{$file-path}.eot?#iefix') format('embedded-opentype'),
+            url('#{$fonts__file-path-fonts}/#{$file-path}.woff2') format('woff2'),
+            url('#{$fonts__file-path-fonts}/#{$file-path}.woff') format('woff'),
+            url('#{$fonts__file-path-fonts}/#{$file-path}.ttf') format('truetype'),
+            url('#{$fonts__file-path-fonts}/#{$file-path}.svg##{$font-family}') format('svg');
+        font-style: $font-style;
+        font-weight: $font-weight;
+    }
+}
+
+@mixin fonts__sans-serif-light () { // MuseoSans 300
+    font-family: $fonts__sans-serif, 'arial', sans-serif;
+    font-style: normal;
+    font-weight: $fonts__font-weight--light;
+}
+
+@mixin fonts__sans-serif-regular () { // MuseoSans 500
+    font-family: $fonts__sans-serif, 'arial', sans-serif;
+    font-style: normal;
+    font-weight: $fonts__font-weight--regular;
+}
+
+@mixin fonts__sans-serif-medium () { // MuseoSans 500
+    font-family: $fonts__sans-serif, 'arial', sans-serif;
+    font-style: normal;
+    font-weight: $fonts__font-weight--medium;
+}
+
+@mixin fonts__sans-serif-bold () { // MuseoSans 700
+    font-family: $fonts__sans-serif, 'arial', sans-serif;
+    font-style: normal;
+    font-weight: $fonts__font-weight--bold;
+}
+
+@mixin fonts__sans-serif-black () { // MuseoSans 900
+    font-family: $fonts__sans-serif, 'arial', sans-serif;
+    font-style: normal;
+    font-weight: $fonts__font-weight--black;
+}
+
+@mixin fonts__serif-regular () {    // Georgia
+    font-family: $fonts__serif-regular, 'times new roman', serif;
+    font-style: normal;
+    font-weight: $fonts__font-weight--regular;
+}
+
+//------------------------------------------
+//              Font Size
+//------------------------------------------
+
+$base-font-size: 16px;
+
+//------------------------------------------
+//              Mixins
+//------------------------------------------
+
+@mixin font-face($font-family, $file-path, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path-fonts}/#{$file-path}.eot');
+        src: url('#{$file-path-fonts}/#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path-fonts}/#{$file-path}.woff2') format('woff2'), url('#{$file-path-fonts}/#{$file-path}.woff') format('woff'), url('#{$file-path-fonts}/#{$file-path}.ttf') format('truetype'), url('#{$file-path-fonts}/#{$file-path}.svg##{$font-family}') format('svg');
+        font-style: $font-style;
+    }
+}
+
+@mixin font-fontawesome ($icon-var, $font-size: null, $base-size: null) {
+    content: $icon-var;
+    font-family: $font-family-fontawesome;
+
+    @if ($font-size != null) {
+        @include font-size($font-size, $base-size);
+    }
+}
+
+@mixin font-ionicons ($icon-var, $font-size: null, $base-size: null) {
+    content: $icon-var;
+    font-family: $font-family-ionicons;
+
+    @if ($font-size != null) {
+        @include font-size($font-size, $base-size);
+    }
+}
+
+@mixin font-stateface-regular ($font-size: null, $base-size: null) {
+    font-family: $font-family-stateface-regular;
+    font-style: normal;
+
+    @if ($font-size != null) {
+        @include font-size($font-size, $base-size);
+    }
+}
+
+@mixin font-size($font-size, $base-size) {
+    @if ($base-size == null) {
+        font-size: px-to-em($font-size);
+    }
+
+    @else {
+        font-size: px-to-em($font-size, $base-size);
+    }
+}
+
+@mixin font-primary-light ($font-size: null, $base-size: null) { // MuseoSans 300
+    font-family: $font-family-primary-light, 'arial', sans-serif;
+    font-style: normal;
+
+    @if ($font-size != null) {
+        @include font-size($font-size, $base-size);
+    }
+}
+
+@mixin font-primary ($font-size: null, $base-size: null) { // MuseoSans 500
+    font-family: $font-family-primary, 'arial', sans-serif;
+    font-style: normal;
+
+    @if ($font-size != null) {
+        @include font-size($font-size, $base-size);
+    }
+}
+
+@mixin font-primary-medium ($font-size: null, $base-size: null) { // MuseoSans 500
+    font-family: $font-family-primary-medium, 'arial', sans-serif;
+    font-style: normal;
+
+    @if ($font-size != null) {
+        @include font-size($font-size, $base-size);
+    }
+}
+
+@mixin font-primary-medium-bold ($font-size: null, $base-size: null) { // MuseoSans 700
+    font-family: $font-family-primary-medium, 'arial', sans-serif;
+    font-style: normal;
+
+    @if ($font-size != null) {
+        @include font-size($font-size, $base-size);
+    }
+}
+
+@mixin font-primary-bold ($font-size: null, $base-size: null) { // MuseoSans 900
+    font-family: $font-family-primary-bold, 'arial', sans-serif;
+    font-style: normal;
+
+    @if ($font-size != null) {
+        @include font-size($font-size, $base-size);
+    }
+}
+
+@mixin font-primary-serif ($font-size: null, $base-size: null) { // Georgia 400
+    font-family: $font-family-serif, 'times new roman', serif;
+    font-style: normal;
+    font-weight: normal;
+
+    @if ($font-size != null) {
+        @include font-size($font-size, $base-size);
+    }
+}
+
+
+
+//------------------------------------------
+//              Font Load
+//------------------------------------------
+@include font-face($font-family-ionicons, 'ionicons', normal);
+@include font-face($font-family-stateface-regular, 'StateFace-Regular-webfont', normal);
+@include font-face($font-family-primary-light, 'MuseoSans-300', normal);
+@include font-face($font-family-primary, 'MuseoSans-500', normal);
+@include font-face($font-family-primary-medium, 'MuseoSans-700', normal);
+@include font-face($font-family-primary-bold, 'MuseoSans-900', normal);
+
+//------------------------------------------
+//              Font Load
+//------------------------------------------
+
+@include font-face-weight($fonts__sans-serif, 'MuseoSans-300', normal, $fonts__font-weight--light);
+@include font-face-weight($fonts__sans-serif, 'MuseoSans-500', normal, $fonts__font-weight--medium);
+@include font-face-weight($fonts__sans-serif, 'MuseoSans-700', normal, $fonts__font-weight--bold);
+@include font-face-weight($fonts__sans-serif, 'MuseoSans-900', normal, $fonts__font-weight--black);
+
